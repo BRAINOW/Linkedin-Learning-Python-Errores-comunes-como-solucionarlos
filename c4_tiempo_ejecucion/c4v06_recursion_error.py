@@ -3,5 +3,12 @@ def calcular_factorial_recursivo(numero):
         return 1
     return numero * calcular_factorial_recursivo(numero-1)
 
+import sys
+#Modificamos el limite de recursividad
+sys.setrecursionlimit(1000) 
+print(sys.getrecursionlimit())
 
-print(calcular_factorial_recursivo(5))
+try:
+    print(calcular_factorial_recursivo(1000))
+except RecursionError as e: 
+    print("El numero es muy grande, no se puede calcular su factorial")
