@@ -20,9 +20,9 @@ def procesar_repuesta(endpoint, num_vehiculo):
     except Exception as e:
         print("Se levantó una excepción")
         print(e)
-    else:
+    else: #Siempre y cuando ninguna excepcion haya sido capturada
         print("No ocurrió ningún error")
-    finally:
+    finally: #Se ejecuta si o si
         print("Fin del procesamiento del endpoint")
 
 

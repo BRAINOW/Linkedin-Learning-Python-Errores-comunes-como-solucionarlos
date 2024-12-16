@@ -8,6 +8,7 @@ def procesar_repuesta(endpoint, num_vehiculo):
         status_code = request.status_code
         print(f"La API respondió con el código {status_code}")
 
+        #Si no retorna datos no puede ser procesado por ".json()" 
         response = request.json()
         print(f"Cantidad de vehículos: {len(response)}")
 

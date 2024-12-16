@@ -4,9 +4,12 @@ import requests
 class UnableToDecodeResponse(Exception):
     """No se pudo decodificar el contenido de la respuesta"""
 
+    #Constructor de la clase excepcion
+    #Podemos modificar el mensaje de la excepcion
     def __init__(self, mensaje):
         self.mensaje = mensaje
 
+    #Retorna el mensaje por defecto de la excepcion
     def __str__(self):
         return f"Ocurrió un error decodificando la respuesta de la petición: {self.mensaje}"
 

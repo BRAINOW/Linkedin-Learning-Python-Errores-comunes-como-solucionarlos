@@ -8,6 +8,7 @@ def procesar_repuesta(endpoint, num_vehiculo):
         status_code = request.status_code
         print(f"La API respondió con el código {status_code}")
 
+        #Datos recibidos del endpoint
         response = request.json()
         print(f"Cantidad de vehículos: {len(response)}")
 
@@ -18,6 +19,8 @@ def procesar_repuesta(endpoint, num_vehiculo):
         print(e)
 
 
-endpoint_ok = "https://run.mocky.io/v3/6d585571-664c-46e1-8289-769ad70c119a"
-endpoint_not_found = "https://run.mocky.io/v3/a94518cb-ba70-4abc-8793-e4d7ee50a914"
+endpoint_ok = "https://run.mocky.io/v3/6d585571-664c-46e1-8289-769ad70c119a" #code: 200
+
+#Levanta una excepcion 
+endpoint_not_found = "https://run.mocky.io/v3/a94518cb-ba70-4abc-8793-e4d7ee50a914" #code: 404
 procesar_repuesta(endpoint=endpoint_not_found, num_vehiculo=3)

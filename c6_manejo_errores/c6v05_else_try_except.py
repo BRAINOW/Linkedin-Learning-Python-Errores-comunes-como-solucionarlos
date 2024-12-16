@@ -13,14 +13,14 @@ def procesar_repuesta(endpoint, num_vehiculo):
 
         print(f"Características del vehículo seleccionado {response[num_vehiculo]}")
 
-    except requests.JSONDecodeError:
+    except requests.JSONDecodeError: #Error en respuesta de endpoint
         print("No se pudo procesar la respuesta de la petición como JSON")
-    except IndexError:
+    except IndexError: #Intentando acceder a un indice invalido
         print("Se está tratando de acceder a un vehículo que no está en la lista")
-    except Exception as e:
+    except Exception as e: #Cualquier otra excepcion
         print("Se levantó una excepción")
         print(e)
-    else:
+    else: #Siempre y cuando ninguna excepcion haya sido capturada
         print("No ocurrió ningún error")
 
 

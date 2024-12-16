@@ -1,6 +1,7 @@
 import requests
 
-
+# Cuando creamos una excepcion propia debemos definirla creando 
+#   una clase que hereda de "Exception"
 class UnableToDecodeResponse(Exception):
     """No se pudo decodificar el contenido de la respuesta"""
     pass
@@ -16,6 +17,7 @@ def procesar_repuesta(endpoint):
         response = request.json()
         print(response)
 
+    #"Except" captura el error y se levantan las dos excepciones
     except requests.JSONDecodeError:
         raise UnableToDecodeResponse
 
